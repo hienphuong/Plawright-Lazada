@@ -24,17 +24,22 @@ import { LazadaHomePage } from '../pages/lazadaHomePage';
 
 // });
 
-test('TC4: Verify sort the item low price to high ', async({ page }) => {
-    const lazada = new LazadaHomePage(page);
+// test('TC4: Verify sort the item low price to high ', async({ page }) => {
+//     const lazada = new LazadaHomePage(page);
 
+//     await lazada.goto();
+//     await lazada.searchProductLogitechKeyboard(); 
+//     await lazada.setPriceFilterForProduct('150000', '4000000');
+//     await lazada.sortPriceFromLowToHigh();
+//     // await lazada.page.waitForTimeout(60000);
+
+// });
+
+test('TC5: Obtain all item names from page 1 to page 3 ', async({ page }) => {
+    const lazada = new LazadaHomePage(page);
     await lazada.goto();
     await lazada.searchProductLogitechKeyboard(); 
     await lazada.setPriceFilterForProduct('150000', '4000000');
     await lazada.sortPriceFromLowToHigh();
-    // await lazada.page.waitForTimeout(60000);
-    
+    await lazada.obtainAllItemNames(); 
 });
-
-
-
-
